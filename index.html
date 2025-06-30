@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pitch Santander - Queren</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background-color: #ec0000;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    section {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    h2 {
+      color: #ec0000;
+    }
+    .card {
+      border: 1px solid #ccc;
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+      background-color: #f9f9f9;
+    }
+    footer {
+      background-color: #ec0000;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+    .swot-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .swot-item {
+      background: white;
+      border: 1px solid #ec0000;
+      border-radius: 6px;
+      padding: 1rem;
+    }
+    .swot-item h3 {
+      margin-top: 0;
+      color: #ec0000;
+      font-size: 1.1rem;
+      cursor: pointer;
+      user-select: none;
+      position: relative;
+      padding-right: 1.5rem;
+    }
+    .swot-item h3::after {
+      content: "▼";
+      position: absolute;
+      right: 0.5rem;
+      font-size: 0.9rem;
+      transition: transform 0.3s ease;
+    }
+    .swot-item h3.collapsed::after {
+      transform: rotate(-90deg);
+    }
+    .swot-item ul {
+      margin: 0.5rem 0 0 1.2rem;
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Pitch Santander - Queren Santos</h1>
+    <p>Ciência de Dados • Análise Financeira • Educadora Tech</p>
+  </header>
+
+  <section>
+    <div class="card">
+      <h2>O Desafio</h2>
+      <p>Como tornar o Santander o banco principal do cliente, em um cenário onde as pessoas usam várias instituições financeiras ao mesmo tempo?</p>
+    </div>
+
+    <div class="card">
+      <h2>Metodologia</h2>
+      <p>Utilizamos a abordagem <strong>Double Diamond</strong>, com as etapas de:</p>
+      <ul>
+        <li><strong>Descobrir</strong>: investigar o comportamento dos clientes;</li>
+        <li><strong>Definir</strong>: foco na falta de percepção de valor concentrado no Santander;</li>
+        <li><strong>Desenvolver</strong>: ideias personalizadas com base em dados;</li>
+        <li><strong>Entregar</strong>: painel de principalidade e ações estratégicas.</li>
+      </ul>
+      <p>Também aplicamos a matriz SWOT para mapear forças, fraquezas, oportunidades e ameaças.</p>
+
+      <div class="swot-list">
+        <div class="swot-item">
+          <h3>Forças</h3>
+          <ul>
+            <li>Marca reconhecida e sólida no mercado financeiro.</li>
+            <li>Ampla rede de atendimento físico e digital.</li>
+            <li>Produtos financeiros diversificados e competitivos.</li>
+            <li>Equipe especializada em análise de dados e experiência do cliente.</li>
+          </ul>
+        </div>
+        <div class="swot-item">
+          <h3>Fraquezas</h3>
+          <ul>
+            <li>Percepção de complexidade nos produtos bancários.</li>
+            <li>Falta de personalização efetiva no relacionamento com o cliente.</li>
+            <li>Concorrência com bancos digitais ágeis e inovadores.</li>
+            <li>Barreiras na usabilidade de algumas plataformas digitais.</li>
+          </ul>
+        </div>
+        <div class="swot-item">
+          <h3>Oportunidades</h3>
+          <ul>
+            <li>Crescimento da demanda por soluções digitais personalizadas.</li>
+            <li>Integração de tecnologias de análise comportamental e IA.</li>
+            <li>Parcerias estratégicas para ampliar benefícios e fidelização.</li>
+            <li>Educação financeira como diferencial competitivo.</li>
+          </ul>
+        </div>
+        <div class="swot-item">
+          <h3>Ameaças</h3>
+          <ul>
+            <li>Aumento da concorrência dos bancos digitais e fintechs.</li>
+            <li>Regulamentações financeiras mais rígidas.</li>
+            <li>Riscos de segurança cibernética e vazamento de dados.</li>
+            <li>Mudança rápida no comportamento e expectativas dos clientes.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Solução</h2>
+      <p>Criamos um <strong>painel de principalidade</strong> com dados comportamentais e segmentação. Ele identifica o nível de engajamento dos clientes e sugere benefícios personalizados com base no perfil e momento financeiro de cada um.</p>
+    </div>
+
+  <div style="margin-top: 1rem; border: 1px solid #ccc; padding: 1rem; border-radius: 6px; background-color: #fff;">
+  <h3 style="color:#ec0000;">Painel Hipotético - Níveis de Principalidade</h3>
+  <canvas id="graficoPrincipalidade" width="400" height="250"></canvas>
+  <p style="margin-top: 0.5rem; font-size: 0.95rem;">
+    O gráfico demonstra visualmente o nível de engajamento dos clientes, servindo como base para decisões estratégicas e ações personalizadas.
+  </p>
+  <ul style="list-style-type: none; padding-left: 0; font-size: 0.9rem;">
+    <li><span style="color: #4caf50; font-weight: bold;">● Cliente A (Verde):</span> Alto engajamento — utiliza salário, crédito e investimentos.</li>
+    <li><span style="color: #ff9800; font-weight: bold;">● Cliente B (Laranja):</span> Engajamento médio — utiliza salário e cartão de crédito.</li>
+    <li><span style="color: #f44336; font-weight: bold;">● Cliente C (Vermelho):</span> Baixo engajamento — utiliza apenas conta corrente.</li>
+  </ul>
+</div>
+    </div>
+
+    <div class="card">
+      <h2>Resultados Esperados</h2>
+      <ul>
+        <li>📈 Aumento do engajamento e retenção de clientes</li>
+        <li>🤝 Fidelização por meio de valor percebido</li>
+        <li>🏦 Santander como banco principal na vida financeira dos clientes</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <footer>
+    Muito obrigada! | Junho 2025
+  </footer>
+
+  <script>
+    document.querySelectorAll('.swot-item h3').forEach(title => {
+      title.addEventListener('click', () => {
+        const ul = title.nextElementSibling;
+        const isVisible = ul.style.display === 'block';
+
+        if (isVisible) {
+          ul.style.display = 'none';
+          title.classList.add('collapsed');
+        } else {
+          ul.style.display = 'block';
+          title.classList.remove('collapsed');
+        }
+      });
+
+      // Inicialmente escondendo o conteúdo e marcando título como colapsado
+      title.classList.add('collapsed');
+      title.nextElementSibling.style.display = 'none';
+    });
+  </script>
+</body>
+</html>
